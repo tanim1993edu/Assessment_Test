@@ -15,15 +15,15 @@ import json
 import logging
 import pytest
 
-from automation.pages.home_page import HomePage
-from automation.pages.login_page import LoginPage
-from automation.pages.product_page import ProductPage
-from automation.pages.cart_page import CartPage
-from automation.pages.checkout_page import CheckoutPage
-from automation.pages.payment_page import PaymentPage
-from automation.pages.order_confirmation_page import OrderConfirmationPage
-from automation.utils.config import settings
-from automation.utils.test_data import load_credentials
+from pages.home_page import HomePage
+from pages.login_page import LoginPage
+from pages.product_page import ProductPage
+from pages.cart_page import CartPage
+from pages.checkout_page import CheckoutPage
+from pages.payment_page import PaymentPage
+from pages.order_confirmation_page import OrderConfirmationPage
+from utils.config import settings
+from utils.test_data import load_credentials
 
 
 @pytest.mark.usefixtures("page")
