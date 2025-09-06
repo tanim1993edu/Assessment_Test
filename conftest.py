@@ -34,7 +34,7 @@ from _pytest.nodes import Item
 from _pytest.runner import CallInfo
 from playwright.sync_api import sync_playwright, Browser, BrowserContext, Page
 
-from automation.utils.config import settings
+from utils.config import settings
 
 # Configure logging
 logging.basicConfig(
