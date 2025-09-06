@@ -128,10 +128,13 @@ When triggering manually, you can configure:
 
 ### 📊 Latest Test Results
 View the latest test runs and artifacts here:
-[GitHub Actions Dashboard](https://github.com/{username}/automation-exercise/actions)
+[GitHub Actions Dashboard](https://github.com/tanim1993edu/Assessment_Test/actions)
+
+Example successful run with artifacts:
+[Test Run #11](https://github.com/tanim1993edu/Assessment_Test/actions/runs/6790600643)
 
 ### 🏷 Build Status
-[![Automation Tests](https://github.com/{username}/automation-exercise/actions/workflows/test.yml/badge.svg)](https://github.com/{username}/automation-exercise/actions/workflows/test.yml)
+[![Assessment Test](https://github.com/tanim1993edu/Assessment_Test/actions/workflows/test.yml/badge.svg)](https://github.com/tanim1993edu/Assessment_Test/actions/workflows/test.yml)
 
 ## Test Data Management
 
