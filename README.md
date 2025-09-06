@@ -1,6 +1,8 @@
-# Automation Exercise Playwright Framework
+# Kinetik QA Assessment - Automation Framework
 
-[![Automation Tests](https://github.com/{username}/automation-exercise/actions/workflows/test.yml/badge.svg)](https://github.com/{username}/automation-exercise/actions/workflows/test.yml)
+[![Assessment Test Workflow](https://github.com/tanim1993edu/Assessment_Test/actions/workflows/assessment-workflow.yml/badge.svg)](https://github.com/tanim1993edu/Assessment_Test/actions/workflows/assessment-workflow.yml)
+
+This repository contains the automation framework for the Kinetik QA Engineer assessment, implementing both UI and API tests for [Automation Exercise](https://automationexercise.com).
 
 This repository contains a comprehensive Playwright + pytest automation framework
 for the [Automation Exercise](https://automationexercise.com) practice site. 

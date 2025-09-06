@@ -10,6 +10,11 @@ on:
 jobs:
   test:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        browser: [chromium, firefox]
+      fail-fast: false
+      max-parallel: 2
 
     steps:
     - name: Checkout repository
@@ -38,8 +43,9 @@ jobs:
     - name: Run Tests
       env:
         PYTHONPATH: ${{ github.workspace }}
+        BROWSER: ${{ matrix.browser }}
       run: |
-        python -m pytest tests/test_end_to_end_purchase.py -v --html=reports/report.html --self-contained-html
+        python -m pytest tests/test_end_to_end_purchase.py tests/test_api_create_account.py -v --html=reports/report-${{ matrix.browser }}.html --self-contained-html --browser ${{ matrix.browser }}
 
     - name: Upload HTML Test Report
       if: always()
