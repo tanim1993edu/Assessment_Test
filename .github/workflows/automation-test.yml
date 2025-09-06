@@ -57,12 +57,38 @@ jobs:
         pip install -r requirements.txt
         pip list  # Debug: List installed packages
 
+    - name: Install System Dependencies
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y \
+          libasound2t64 \
+          libatk1.0-0 \
+          libatk-bridge2.0-0 \
+          libcups2 \
+          libdbus-1-3 \
+          libdrm2 \
+          libgbm1 \
+          libgtk-3-0 \
+          libnspr4 \
+          libnss3 \
+          libx11-6 \
+          libxcb1 \
+          libxcomposite1 \
+          libxdamage1 \
+          libxext6 \
+          libxfixes3 \
+          libxrandr2 \
+          xvfb \
+          fonts-liberation \
+          libcairo2 \
+          libpango-1.0-0 \
+          libpangocairo-1.0-0
+
     - name: Install Playwright
       if: steps.playwright-cache.outputs.cache-hit != 'true'
       run: |
         pip install playwright
         python -m playwright install --with-deps chromium
-        playwright install-deps
 
     - name: Create directories
       run: |
@@ -76,7 +102,9 @@ jobs:
         BROWSER: ${{ matrix.browser }}
         HEADED: false
         PYTHONPATH: ${{ github.workspace }}
+        DISPLAY: ':99'
       run: |
+        sudo Xvfb :99 -screen 0 1024x768x24 > /dev/null 2>&1 &
         pytest -v --html=reports/report.html --self-contained-html tests/test_end_to_end_purchase.py -s
 
     - name: Debug Information
