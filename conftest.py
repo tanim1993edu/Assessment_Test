@@ -199,9 +199,10 @@ def pytest_runtest_makereport(item: Item, call: CallInfo[None]) -> Generator[Non
                 
                 # Add to HTML report
                 if hasattr(item.config, "_html"):
+                    html = f'<div><img src="{screenshot_path}" style="width:600px"></div>'
+                    html += f'<div><a href="{source_path}">Page Source</a></div>'
                     extra = getattr(report, "extra", [])
-                    extra.append(item.config._html.extras.image(str(screenshot_path)))
-                    extra.append(item.config._html.extras.html(f"<a href='{source_path}'>Page Source</a>"))
+                    extra.append(html)
                     report.extra = extra
                     
                 logging.error(f"Test failed. Screenshot saved: {screenshot_path}")

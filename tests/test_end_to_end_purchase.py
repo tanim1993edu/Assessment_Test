@@ -72,8 +72,8 @@ def test_end_to_end_purchase(page, credentials_file: Path) -> None:
     page.goto(f"{settings.base_url}/view_cart")
     page.wait_for_timeout(2000)  # Wait to see cart page
     
-    # Pause for user verification
-    input("Continue to iterate? (Press Enter to continue...)")
+    # Verify cart contents
+    logger.info("Verifying cart contents...")
     
     # Verify two items are present in the cart
     assert cart_page.get_cart_items_count() >= 2, "Expected at least two items in the cart"
