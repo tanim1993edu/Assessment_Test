@@ -31,44 +31,39 @@ jobs:
         python -m pip install --upgrade pip
         pip install -r requirements.txt
         pip install pytest-playwright
-        playwright install --with-deps chromium
-        playwright install-deps chromium
+        python -m playwright install --with-deps ${{ matrix.browser }}
 
     - name: Create Directories
       run: |
-        mkdir -p reports
-        mkdir -p downloads
-        mkdir -p logs
+        mkdir -p reports/${{ matrix.browser }}
+        mkdir -p downloads/${{ matrix.browser }}
+        mkdir -p logs/${{ matrix.browser }}
 
     - name: Run Tests
       env:
         PYTHONPATH: ${{ github.workspace }}
         BROWSER: ${{ matrix.browser }}
+        DOWNLOAD_PATH: ${{ github.workspace }}/downloads/${{ matrix.browser }}
       run: |
-        python -m pytest tests/test_end_to_end_purchase.py tests/test_api_create_account.py -v --html=reports/report-${{ matrix.browser }}.html --self-contained-html --browser ${{ matrix.browser }}
+        python -m pytest tests/test_end_to_end_purchase.py tests/test_api_create_account.py -v --html=reports/${{ matrix.browser }}/report.html --self-contained-html
 
-    - name: Upload HTML Test Report
+    - name: Upload Test Artifacts
       if: always()
       uses: actions/upload-artifact@v4
       with:
-        name: test-report
-        path: reports/report.html
+        name: test-results-${{ matrix.browser }}
+        path: |
+          reports/${{ matrix.browser }}
+          downloads/${{ matrix.browser }}
+          logs/${{ matrix.browser }}
         retention-days: 30
 
     - name: Upload Failed Test Screenshots
       if: failure()
       uses: actions/upload-artifact@v4
       with:
-        name: test-failures
+        name: test-failures-${{ matrix.browser }}
         path: |
           **/screenshots/*.png
           **/test-results/
         retention-days: 7
-
-    - name: Upload Invoice
-      if: always()
-      uses: actions/upload-artifact@v4
-      with:
-        name: invoice
-        path: downloads/invoice_invoice.txt
-        retention-days: 30
