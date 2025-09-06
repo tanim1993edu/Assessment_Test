@@ -11,7 +11,7 @@ from __future__ import annotations
 
 import logging
 from playwright.sync_api import Page
-from automation.pages.base_page import BasePage
+from pages.base_page import BasePage
 
 
 class CheckoutPage(BasePage):

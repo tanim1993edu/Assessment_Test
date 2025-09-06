@@ -14,7 +14,8 @@ import logging
 from pathlib import Path
 from typing import Optional
 from playwright.sync_api import Page, Download
-from automation.pages.base_page import BasePage
+from pages.base_page import BasePage
+from utils.config import settings
 
 
 class OrderConfirmationPage(BasePage):
