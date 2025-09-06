@@ -1,0 +1,100 @@
+name: Automation Tests
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+  workflow_dispatch:
+    inputs:
+      browser:
+        description: 'Browser to run tests on'
+        required: true
+        default: 'chromium'
+        type: choice
+        options:
+        - chromium
+        - firefox
+      headed:
+        description: 'Run in headed mode'
+        required: false
+        type: boolean
+        default: false
+
+env:
+  PYTHON_VERSION: '3.10'
+  PLAYWRIGHT_BROWSERS_PATH: '0'
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        browser: [chromium, firefox]
+      fail-fast: false
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: ${{ env.PYTHON_VERSION }}
+        cache: 'pip'
+
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+
+    - name: Install Playwright browsers
+      run: |
+        playwright install
+
+    - name: Create directories
+      run: |
+        mkdir -p reports
+        mkdir -p downloads
+        mkdir -p logs
+
+    - name: Run Tests
+      env:
+        BROWSER: ${{ matrix.browser }}
+        HEADED: ${{ github.event.inputs.headed || false }}
+      run: |
+        pytest -v --html=reports/report-${{ matrix.browser }}.html --self-contained-html -n auto
+
+    - name: Upload Test Reports
+      if: always()
+      uses: actions/upload-artifact@v3
+      with:
+        name: test-reports-${{ matrix.browser }}
+        path: reports/
+        retention-days: 30
+
+    - name: Upload Screenshots
+      if: failure()
+      uses: actions/upload-artifact@v3
+      with:
+        name: failure-screenshots-${{ matrix.browser }}
+        path: |
+          **/screenshots/
+          **/test-results/
+        retention-days: 7
+
+    - name: Upload Downloads
+      if: always()
+      uses: actions/upload-artifact@v3
+      with:
+        name: downloads-${{ matrix.browser }}
+        path: downloads/
+        retention-days: 7
+
+    - name: Upload Logs
+      if: always()
+      uses: actions/upload-artifact@v3
+      with:
+        name: logs-${{ matrix.browser }}
+        path: logs/
+        retention-days: 7

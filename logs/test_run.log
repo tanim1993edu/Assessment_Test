@@ -1,0 +1,49 @@
+2025-09-06 23:32:48,331 [INFO] Attempting login with email: tazeem_b86b5d10@yopmail.com
+2025-09-06 23:32:54,981 [INFO] Adding product at index 0 to the cart
+2025-09-06 23:32:56,603 [INFO] Adding product at index 1 to the cart
+2025-09-06 23:33:32,534 [INFO] Proceeding to checkout
+2025-09-06 23:33:33,637 [INFO] Placing order and navigating to payment page
+2025-09-06 23:33:35,959 [INFO] Submitting payment and confirming the order
+2025-09-06 23:33:37,728 [INFO] Order success message: ORDER PLACED!
+2025-09-06 23:33:37,729 [INFO] Downloading invoice from confirmation page
+2025-09-06 23:33:38,326 [ERROR] Failed to capture screenshot: 'HTMLReport' object has no attribute 'append'
+2025-09-06 23:34:18,709 [INFO] Attempting login with email: tazeem_b86b5d10@yopmail.com
+2025-09-06 23:34:26,017 [INFO] Adding product at index 0 to the cart
+2025-09-06 23:34:27,646 [INFO] Adding product at index 1 to the cart
+2025-09-06 23:34:52,869 [INFO] Proceeding to checkout
+2025-09-06 23:34:54,015 [INFO] Placing order and navigating to payment page
+2025-09-06 23:34:54,671 [INFO] Submitting payment and confirming the order
+2025-09-06 23:34:56,516 [INFO] Order success message: ORDER PLACED!
+2025-09-06 23:34:56,517 [INFO] Downloading invoice from confirmation page
+2025-09-06 23:34:57,525 [INFO] Invoice downloaded to: D:\CV\Latest CV\Kinetik\automation\downloads\invoice_invoice.txt
+2025-09-06 23:42:22,680 [DEBUG] Using proactor: IocpProactor
+2025-09-06 23:44:19,689 [DEBUG] Using proactor: IocpProactor
+2025-09-06 23:44:24,556 [DEBUG] Navigating to URL: https://automationexercise.com
+2025-09-06 23:44:30,604 [DEBUG] Clicking element: a[href='/login']
+2025-09-06 23:44:33,350 [INFO] Attempting login with email: tazeem_b86b5d10@yopmail.com
+2025-09-06 23:44:33,352 [DEBUG] Filling element input[data-qa='login-email'] with text: tazeem_b86b5d10@yopmail.com
+2025-09-06 23:44:33,523 [DEBUG] Filling element input[data-qa='login-password'] with text: Password123
+2025-09-06 23:44:33,623 [DEBUG] Clicking element: button[data-qa='login-button']
+2025-09-06 23:44:37,717 [DEBUG] Clicking element: a[href='/products']
+2025-09-06 23:44:40,366 [INFO] Adding product at index 0 to the cart
+2025-09-06 23:44:40,857 [DEBUG] Waiting for confirmation modal and clicking Continue Shopping
+2025-09-06 23:44:46,161 [INFO] Adding product at index 1 to the cart
+2025-09-06 23:44:46,288 [DEBUG] Waiting for confirmation modal and clicking Continue Shopping
+2025-09-06 23:46:24,042 [DEBUG] Cart contains 2 items
+2025-09-06 23:46:24,044 [INFO] Proceeding to checkout
+2025-09-06 23:46:24,045 [DEBUG] Clicking element: .btn-default.check_out
+2025-09-06 23:46:25,499 [INFO] Placing order and navigating to payment page
+2025-09-06 23:46:25,501 [DEBUG] Clicking element: a[href*='payment']
+2025-09-06 23:46:26,938 [DEBUG] Entering payment information
+2025-09-06 23:46:26,939 [DEBUG] Filling element input[name='name_on_card'] with text: Tazeem Hossain
+2025-09-06 23:46:27,019 [DEBUG] Filling element input[name='card_number'] with text: 4111111111111111
+2025-09-06 23:46:27,041 [DEBUG] Filling element input[name='cvc'] with text: 123
+2025-09-06 23:46:27,068 [DEBUG] Filling element input[name='expiry_month'] with text: 12
+2025-09-06 23:46:27,087 [DEBUG] Filling element input[name='expiry_year'] with text: 2030
+2025-09-06 23:46:27,107 [INFO] Submitting payment and confirming the order
+2025-09-06 23:46:27,108 [DEBUG] Clicking element: button#submit
+2025-09-06 23:46:28,948 [DEBUG] Got text from "div#success_message, h2:has-text('Order Placed!')": 'ORDER PLACED!'
+2025-09-06 23:46:28,949 [INFO] Order success message: ORDER PLACED!
+2025-09-06 23:46:28,950 [INFO] Downloading invoice from confirmation page
+2025-09-06 23:46:28,973 [DEBUG] Clicking element: a[href*='download_invoice']
+2025-09-06 23:46:30,245 [INFO] Invoice downloaded to: D:\CV\Latest CV\Kinetik\automation\downloads\invoice_invoice.txt

@@ -1,0 +1,30 @@
+2025-09-06 23:44:19 [DEBUG] asyncio: Using proactor: IocpProactor
+2025-09-06 23:44:24 [DEBUG] EndToEndTest: Navigating to URL: https://automationexercise.com
+2025-09-06 23:44:30 [DEBUG] EndToEndTest: Clicking element: a[href='/login']
+2025-09-06 23:44:33 [INFO] EndToEndTest: Attempting login with email: tazeem_b86b5d10@yopmail.com
+2025-09-06 23:44:33 [DEBUG] EndToEndTest: Filling element input[data-qa='login-email'] with text: tazeem_b86b5d10@yopmail.com
+2025-09-06 23:44:33 [DEBUG] EndToEndTest: Filling element input[data-qa='login-password'] with text: Password123
+2025-09-06 23:44:33 [DEBUG] EndToEndTest: Clicking element: button[data-qa='login-button']
+2025-09-06 23:44:37 [DEBUG] EndToEndTest: Clicking element: a[href='/products']
+2025-09-06 23:44:40 [INFO] EndToEndTest: Adding product at index 0 to the cart
+2025-09-06 23:44:40 [DEBUG] EndToEndTest: Waiting for confirmation modal and clicking Continue Shopping
+2025-09-06 23:44:46 [INFO] EndToEndTest: Adding product at index 1 to the cart
+2025-09-06 23:44:46 [DEBUG] EndToEndTest: Waiting for confirmation modal and clicking Continue Shopping
+2025-09-06 23:46:24 [DEBUG] EndToEndTest: Cart contains 2 items
+2025-09-06 23:46:24 [INFO] EndToEndTest: Proceeding to checkout
+2025-09-06 23:46:24 [DEBUG] EndToEndTest: Clicking element: .btn-default.check_out
+2025-09-06 23:46:25 [INFO] EndToEndTest: Placing order and navigating to payment page
+2025-09-06 23:46:25 [DEBUG] EndToEndTest: Clicking element: a[href*='payment']
+2025-09-06 23:46:26 [DEBUG] EndToEndTest: Entering payment information
+2025-09-06 23:46:26 [DEBUG] EndToEndTest: Filling element input[name='name_on_card'] with text: Tazeem Hossain
+2025-09-06 23:46:27 [DEBUG] EndToEndTest: Filling element input[name='card_number'] with text: 4111111111111111
+2025-09-06 23:46:27 [DEBUG] EndToEndTest: Filling element input[name='cvc'] with text: 123
+2025-09-06 23:46:27 [DEBUG] EndToEndTest: Filling element input[name='expiry_month'] with text: 12
+2025-09-06 23:46:27 [DEBUG] EndToEndTest: Filling element input[name='expiry_year'] with text: 2030
+2025-09-06 23:46:27 [INFO] EndToEndTest: Submitting payment and confirming the order
+2025-09-06 23:46:27 [DEBUG] EndToEndTest: Clicking element: button#submit
+2025-09-06 23:46:28 [DEBUG] EndToEndTest: Got text from "div#success_message, h2:has-text('Order Placed!')": 'ORDER PLACED!'
+2025-09-06 23:46:28 [INFO] EndToEndTest: Order success message: ORDER PLACED!
+2025-09-06 23:46:28 [INFO] EndToEndTest: Downloading invoice from confirmation page
+2025-09-06 23:46:28 [DEBUG] EndToEndTest: Clicking element: a[href*='download_invoice']
+2025-09-06 23:46:30 [INFO] EndToEndTest: Invoice downloaded to: D:\CV\Latest CV\Kinetik\automation\downloads\invoice_invoice.txt
