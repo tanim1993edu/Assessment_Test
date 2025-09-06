@@ -12,7 +12,7 @@ from typing import Dict, Any
 from pathlib import Path
 
 from playwright.sync_api import BrowserContext
-from automation.utils.config import settings
+from utils.config import settings
 
 
 def get_browser_context_args(

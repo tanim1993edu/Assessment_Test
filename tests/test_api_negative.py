@@ -4,8 +4,8 @@ Tests for API account creation, including negative scenarios.
 
 import pytest
 import requests
-from automation.utils.config import settings
-from automation.utils.test_data import generate_unique_email, get_test_user_details
+from utils.config import settings
+from utils.test_data import generate_unique_email, get_test_user_details
 
 
 def test_duplicate_account_creation():

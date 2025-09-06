@@ -15,7 +15,7 @@ import uuid
 from pathlib import Path
 from typing import Dict, Tuple
 
-from automation.utils.config import settings
+from utils.config import settings
 
 
 def generate_unique_email(prefix: str = "user", domain: str = "yopmail.com") -> str:

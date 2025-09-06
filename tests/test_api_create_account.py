@@ -14,8 +14,8 @@ from pathlib import Path
 import pytest
 import requests
 
-from automation.utils.config import settings
-from automation.utils.test_data import generate_unique_email, save_credentials, get_test_user_details
+from utils.config import settings
+from utils.test_data import generate_unique_email, save_credentials, get_test_user_details
 
 
 API_URL = f"{settings.base_url}/api/createAccount"

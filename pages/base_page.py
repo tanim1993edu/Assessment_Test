@@ -15,7 +15,7 @@ generate useful debug output which can be consumed by test reports.
 
 Usage:
 
-    from automation.pages.base_page import BasePage
+    from pages.base_page import BasePage
     from playwright.sync_api import Page
 
     class HomePage(BasePage):

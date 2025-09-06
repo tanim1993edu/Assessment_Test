@@ -8,9 +8,9 @@ from pathlib import Path
 import logging
 import pytest
 
-from automation.pages.home_page import HomePage
-from automation.pages.login_page import LoginPage
-from automation.utils.test_data import load_credentials
+from pages.home_page import HomePage
+from pages.login_page import LoginPage
+from utils.test_data import load_credentials
 
 
 @pytest.mark.usefixtures("page")

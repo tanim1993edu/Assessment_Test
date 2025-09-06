@@ -12,7 +12,7 @@ import logging
 from typing import Optional
 
 from playwright.sync_api import Page
-from automation.pages.base_page import BasePage
+from pages.base_page import BasePage
 
 
 class NavigationComponent(BasePage):
