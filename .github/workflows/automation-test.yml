@@ -60,8 +60,15 @@ jobs:
     - name: Install System Dependencies
       run: |
         sudo apt-get update
+        # Try installing the new package name first, fall back to old name if not available
+        if sudo apt-get install -y libasound2t64 2>/dev/null; then
+          echo "Successfully installed libasound2t64"
+        else
+          sudo apt-get install -y libasound2
+        fi
+        
+        # Install other required packages
         sudo apt-get install -y \
-          libasound2t64 \
           libatk1.0-0 \
           libatk-bridge2.0-0 \
           libcups2 \
@@ -82,13 +89,25 @@ jobs:
           fonts-liberation \
           libcairo2 \
           libpango-1.0-0 \
-          libpangocairo-1.0-0
+          libpangocairo-1.0-0 \
+          libx11-xcb1 \
+          libxcursor1 \
+          libxss1 \
+          libxtst6 \
+          libpangoft2-1.0-0
 
     - name: Install Playwright
       if: steps.playwright-cache.outputs.cache-hit != 'true'
       run: |
-        pip install playwright
+        # Install playwright with specific version
+        pip install playwright==1.38.0
+        
+        # Install browser with verbose output
+        python -m playwright install --verbose chromium
+        
+        # Verify installation
         python -m playwright install --with-deps chromium
+        playwright --version
 
     - name: Create directories
       run: |
