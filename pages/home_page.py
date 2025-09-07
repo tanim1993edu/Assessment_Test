@@ -1,11 +1,4 @@
-"""
-Page object representing the home page of Automation Exercise.
-
-The home page exposes top navigation elements used to drive the purchase
-flow, such as the link to the login page and product categories. The
-locators defined here target the visible names of the menu items rather
-than classes which may change over time.
-"""
+"""Home page object with navigation elements for login, products, and cart."""
 
 from __future__ import annotations
 

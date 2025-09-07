@@ -1,11 +1,4 @@
-"""
-Global configuration used across the automation framework.
-
-Values are read from environment variables when available, falling back
-to sensible defaults. Keeping configuration in a separate module
-decouples tests from hardcoded values and enables easy overrides via
-CI/CD pipelines or command line options.
-"""
+"""Global configuration with environment variable support and sensible defaults."""
 
 import os
 from pathlib import Path

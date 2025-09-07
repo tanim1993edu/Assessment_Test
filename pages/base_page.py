@@ -1,39 +1,9 @@
-"""
-Base page object for Playwright page interactions.
-
-This module defines a ``BasePage`` class that all page objects in the
-framework inherit from. It exposes a reference to the Playwright ``Page``
-instance and provides a handful of convenience methods for interacting
-with the UI. Encapsulating common behaviour here improves maintainability
-and allows you to swap out the underlying implementation (e.g. switch to
-another driver) without rewriting every page object.
-
-Because Playwright has rich built‑in methods for waiting and action
-assertions, this base class simply wraps a few of those methods to keep
-page objects terse. It also accepts a logger so that all interactions
-generate useful debug output which can be consumed by test reports.
-
-Usage:
-
-    from pages.base_page import BasePage
-    from playwright.sync_api import Page
-
-    class HomePage(BasePage):
-        def __init__(self, page: Page, logger: logging.Logger):
-            super().__init__(page, logger)
-            ...
-
-        def click_login(self) -> None:
-            self.click("text=Signup / Login")
-
-The above example shows how the base page can be used to define
-interactions on derived page objects.
-"""
+"""Base page object providing common UI interaction methods and logging for all page objects."""
 
 from __future__ import annotations
 
 import logging
-from typing import Optional, Union
+from typing import Generator, Optional, Union
 
 from playwright.sync_api import Page, Locator
 
@@ -111,7 +81,7 @@ class BasePage:
         self.logger.debug(f"Got attribute {name} from {selector}: {value}")
         return value or ""
 
-    def wait_for_download(self) -> str:
+    def wait_for_download(self) -> Generator[None, None, str]:
         """Wait for a download to complete and return the file path."""
         with self.page.expect_download() as download_info:
             yield

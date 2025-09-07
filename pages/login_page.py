@@ -1,12 +1,4 @@
-"""
-Page object representing the "Signup / Login" page on Automation Exercise.
-
-This page contains both the login form for existing users and the sign‑up
-form for new users. In our end‑to‑end purchase flow we only need the
-login form since account creation is performed via the API. The locators
-used here are resilient to small UI changes by targeting visible labels
-rather than brittle CSS classes.
-"""
+"""Login page object handling user authentication with email and password."""
 
 from __future__ import annotations
 

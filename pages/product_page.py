@@ -1,12 +1,4 @@
-"""
-Page object for handling product listing and actions on Automation Exercise.
-
-This page provides methods to interact with the product grid, add items to
-the cart and navigate to product detail pages. It assumes that the
-products listing page is already open when methods are invoked. The
-selectors intentionally rely on the visible text of buttons and headings
-to reduce coupling to CSS classes.
-"""
+"""Product listing page object with methods for product selection and cart management."""
 
 from __future__ import annotations
 

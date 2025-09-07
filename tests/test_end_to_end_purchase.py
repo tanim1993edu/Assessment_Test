@@ -1,12 +1,4 @@
-"""
-End‑to‑end purchase flow using UI automation.
-
-This test exercises the critical path for a logged‑in user to add
-multiple products to their cart, complete the checkout process, and
-download the resulting invoice. It relies on a previously created
-account stored in ``user_credentials.json`` and uses the Page Object
-Model to break interactions into logical units.
-"""
+"""End-to-end test for product purchase flow from login through order confirmation."""
 
 from __future__ import annotations
 

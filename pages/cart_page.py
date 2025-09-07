@@ -1,10 +1,4 @@
-"""
-Page object representing the shopping cart view.
-
-This page enables verification of items in the cart and progression to
-checkout. It also exposes a method to proceed directly to the checkout
-screen.
-"""
+"""Shopping cart page object for managing cart items and checkout process."""
 
 from __future__ import annotations
 

@@ -1,11 +1,4 @@
-"""
-Page object for the payment form used to complete an order.
-
-On this page the user inputs credit card information and submits the
-payment. Successful submission will redirect to the order confirmation
-page. The selectors used here are based on common input names for card
-details. They may need adjusting if the site uses different markup.
-"""
+"""Payment page object for handling credit card information and order submission."""
 
 from __future__ import annotations
 

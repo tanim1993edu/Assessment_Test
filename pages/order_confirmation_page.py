@@ -1,12 +1,4 @@
-"""
-Page object representing the order confirmation page.
-
-After a successful payment the user is presented with a confirmation
-message and a link to download the invoice. This page object provides
-methods to assert the presence of the success message and to trigger
-the invoice download. The downloaded file path is returned so that
-tests can verify its existence and file size.
-"""
+"""Order confirmation page object for verifying order success and downloading invoices."""
 
 from __future__ import annotations
 

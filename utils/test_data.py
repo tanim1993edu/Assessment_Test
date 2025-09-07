@@ -1,12 +1,4 @@
-"""
-Utilities for generating and managing test data.
-
-This module centralises functions for creating unique email addresses,
-reading and writing credentials files, and retrieving fixed user input
-values used throughout the tests. Storing these utilities in one place
-encourages reuse and makes it straightforward to adjust values for
-different test scenarios or environments.
-"""
+"""Utilities for generating and managing test data like emails and user credentials."""
 
 from __future__ import annotations
 

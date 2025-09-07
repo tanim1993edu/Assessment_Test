@@ -1,13 +1,4 @@
-"""
-Tests for the Create Account API of Automation Exercise.
-
-These tests exercise the API used to register a new user. They
-validate that a user can be created with valid data and that the
-service returns an appropriate error when attempting to create a user
-with an existing email address. Upon successful account creation the
-credentials are persisted to ``user_credentials.json`` for use by
-the end‑to‑end UI test.
-"""
+"""Tests for user account creation API with validation of success and duplicate scenarios."""
 
 import json
 from pathlib import Path

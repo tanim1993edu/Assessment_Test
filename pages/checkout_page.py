@@ -1,11 +1,4 @@
-"""
-Page object for the checkout summary page prior to payment.
-
-This page displays billing and delivery address information along with an
-order summary. A comment field allows the user to add notes for the
-delivery. The primary action on this page is the "Place Order" button
-which navigates to the payment page.
-"""
+"""Page object for checkout summary and order placement."""
 
 from __future__ import annotations
 
