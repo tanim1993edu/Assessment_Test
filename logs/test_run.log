@@ -92,3 +92,63 @@
 2025-09-07 23:33:32,674 [DEBUG] Filling element input[data-qa='login-email'] with text: tazeem_0763ebd7@yopmail.com
 2025-09-07 23:33:32,706 [DEBUG] Filling element input[data-qa='login-password'] with text: Password123
 2025-09-07 23:33:32,726 [DEBUG] Clicking element: button[data-qa='login-button']
+2025-09-07 23:44:34,019 [DEBUG] Using proactor: IocpProactor
+2025-09-07 23:44:39,765 [DEBUG] Navigating to URL: https://automationexercise.com
+2025-09-07 23:44:44,629 [DEBUG] Clicking element: a[href='/login']
+2025-09-07 23:44:47,375 [INFO] Attempting login with email: tazeem_0763ebd7@yopmail.com
+2025-09-07 23:44:47,376 [DEBUG] Filling element input[data-qa='login-email'] with text: tazeem_0763ebd7@yopmail.com
+2025-09-07 23:44:47,451 [DEBUG] Filling element input[data-qa='login-password'] with text: Password123
+2025-09-07 23:44:47,489 [DEBUG] Clicking element: button[data-qa='login-button']
+2025-09-07 23:44:51,469 [DEBUG] Clicking element: a[href='/products']
+2025-09-07 23:44:53,921 [INFO] Adding product at index 0 to the cart
+2025-09-07 23:44:54,077 [DEBUG] Waiting for confirmation modal and clicking Continue Shopping
+2025-09-07 23:44:55,547 [INFO] Adding product at index 1 to the cart
+2025-09-07 23:44:55,651 [DEBUG] Waiting for confirmation modal and clicking Continue Shopping
+2025-09-07 23:45:00,650 [INFO] Verifying cart contents...
+2025-09-07 23:45:00,681 [DEBUG] Cart contains 2 items
+2025-09-07 23:45:00,681 [INFO] Proceeding to checkout
+2025-09-07 23:45:00,682 [DEBUG] Clicking element: .btn-default.check_out
+2025-09-07 23:45:01,099 [INFO] Placing order and navigating to payment page
+2025-09-07 23:45:01,100 [DEBUG] Clicking element: a[href*='payment']
+2025-09-07 23:45:02,522 [DEBUG] Entering payment information
+2025-09-07 23:45:02,523 [DEBUG] Filling element input[name='name_on_card'] with text: Tazeem Hossain
+2025-09-07 23:45:02,598 [DEBUG] Filling element input[name='card_number'] with text: 4111111111111111
+2025-09-07 23:45:02,636 [DEBUG] Filling element input[name='cvc'] with text: 123
+2025-09-07 23:45:02,689 [DEBUG] Filling element input[name='expiry_month'] with text: 12
+2025-09-07 23:45:02,732 [DEBUG] Filling element input[name='expiry_year'] with text: 2030
+2025-09-07 23:45:02,775 [INFO] Submitting payment and confirming the order
+2025-09-07 23:45:02,778 [DEBUG] Clicking element: button#submit
+2025-09-07 23:45:04,620 [DEBUG] Got text from "div#success_message, h2:has-text('Order Placed!')": 'ORDER PLACED!'
+2025-09-07 23:45:04,621 [INFO] Order success message: ORDER PLACED!
+2025-09-07 23:45:04,622 [INFO] Downloading invoice from confirmation page
+2025-09-07 23:45:04,648 [DEBUG] Clicking element: a[href*='download_invoice']
+2025-09-07 23:45:05,651 [INFO] Invoice downloaded to: D:\CV\Latest CV\Kinetik\automation\downloads\invoice_invoice.txt
+2025-09-07 23:45:25,964 [DEBUG] Starting new HTTPS connection (1): automationexercise.com:443
+2025-09-07 23:45:27,244 [DEBUG] https://automationexercise.com:443 "POST /api/createAccount HTTP/1.1" 200 None
+2025-09-07 23:45:27,271 [DEBUG] Starting new HTTPS connection (1): automationexercise.com:443
+2025-09-07 23:45:28,418 [DEBUG] https://automationexercise.com:443 "POST /api/createAccount HTTP/1.1" 200 None
+2025-09-07 23:45:28,436 [DEBUG] Starting new HTTPS connection (1): automationexercise.com:443
+2025-09-07 23:45:28,935 [DEBUG] https://automationexercise.com:443 "POST /api/createAccount HTTP/1.1" 200 None
+2025-09-07 23:45:28,939 [DEBUG] Starting new HTTPS connection (1): automationexercise.com:443
+2025-09-07 23:45:29,388 [DEBUG] https://automationexercise.com:443 "POST /api/createAccount HTTP/1.1" 200 None
+2025-09-07 23:46:02,043 [DEBUG] Starting new HTTPS connection (1): automationexercise.com:443
+2025-09-07 23:46:03,238 [DEBUG] https://automationexercise.com:443 "POST /api/createAccount HTTP/1.1" 200 None
+2025-09-07 23:46:03,277 [DEBUG] Starting new HTTPS connection (1): automationexercise.com:443
+2025-09-07 23:46:04,480 [DEBUG] https://automationexercise.com:443 "POST /api/createAccount HTTP/1.1" 200 None
+2025-09-07 23:46:04,510 [DEBUG] Starting new HTTPS connection (1): automationexercise.com:443
+2025-09-07 23:46:05,044 [DEBUG] https://automationexercise.com:443 "POST /api/createAccount HTTP/1.1" 200 None
+2025-09-07 23:46:05,049 [DEBUG] Starting new HTTPS connection (1): automationexercise.com:443
+2025-09-07 23:46:05,521 [DEBUG] https://automationexercise.com:443 "POST /api/createAccount HTTP/1.1" 200 None
+2025-09-07 23:46:05,531 [DEBUG] Using proactor: IocpProactor
+2025-09-07 23:46:11,222 [DEBUG] Navigating to URL: https://automationexercise.com
+2025-09-07 23:46:16,629 [DEBUG] Clicking element: a[href='/login']
+2025-09-07 23:46:19,240 [INFO] Attempting login with email: tazeem_da28f504@yopmail.com
+2025-09-07 23:46:19,243 [DEBUG] Filling element input[data-qa='login-email'] with text: tazeem_da28f504@yopmail.com
+2025-09-07 23:46:19,321 [DEBUG] Filling element input[data-qa='login-password'] with text: Password123
+2025-09-07 23:46:19,363 [DEBUG] Clicking element: button[data-qa='login-button']
+2025-09-07 23:46:23,333 [DEBUG] Clicking element: a[href='/products']
+2025-09-07 23:46:25,814 [INFO] Adding product at index 0 to the cart
+2025-09-07 23:46:25,984 [DEBUG] Waiting for confirmation modal and clicking Continue Shopping
+2025-09-07 23:46:26,265 [ERROR] Failed to capture failure artifacts: Page.screenshot: Target page, context or browser has been closed
+2025-09-07 23:46:27,041 [DEBUG] Navigating to URL: https://automationexercise.com
+2025-09-07 23:46:28,370 [ERROR] Failed to capture failure artifacts: Page.screenshot: Target page, context or browser has been closed
