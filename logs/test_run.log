@@ -47,3 +47,48 @@
 2025-09-06 23:46:28,950 [INFO] Downloading invoice from confirmation page
 2025-09-06 23:46:28,973 [DEBUG] Clicking element: a[href*='download_invoice']
 2025-09-06 23:46:30,245 [INFO] Invoice downloaded to: D:\CV\Latest CV\Kinetik\automation\downloads\invoice_invoice.txt
+2025-09-07 23:32:36,545 [DEBUG] Starting new HTTPS connection (1): automationexercise.com:443
+2025-09-07 23:32:37,785 [DEBUG] https://automationexercise.com:443 "POST /api/createAccount HTTP/1.1" 200 None
+2025-09-07 23:32:37,815 [DEBUG] Starting new HTTPS connection (1): automationexercise.com:443
+2025-09-07 23:32:38,260 [DEBUG] https://automationexercise.com:443 "POST /api/createAccount HTTP/1.1" 200 None
+2025-09-07 23:32:38,287 [DEBUG] Starting new HTTPS connection (1): automationexercise.com:443
+2025-09-07 23:32:39,458 [DEBUG] https://automationexercise.com:443 "POST /api/createAccount HTTP/1.1" 200 None
+2025-09-07 23:32:39,480 [DEBUG] Starting new HTTPS connection (1): automationexercise.com:443
+2025-09-07 23:32:39,933 [DEBUG] https://automationexercise.com:443 "POST /api/createAccount HTTP/1.1" 200 None
+2025-09-07 23:32:39,950 [DEBUG] Using proactor: IocpProactor
+2025-09-07 23:32:47,376 [DEBUG] Navigating to URL: https://automationexercise.com
+2025-09-07 23:32:52,203 [DEBUG] Clicking element: a[href='/login']
+2025-09-07 23:32:58,065 [INFO] Attempting login with email: tazeem_0763ebd7@yopmail.com
+2025-09-07 23:32:58,067 [DEBUG] Filling element input[data-qa='login-email'] with text: tazeem_0763ebd7@yopmail.com
+2025-09-07 23:32:58,124 [DEBUG] Filling element input[data-qa='login-password'] with text: Password123
+2025-09-07 23:32:58,170 [DEBUG] Clicking element: button[data-qa='login-button']
+2025-09-07 23:33:06,683 [DEBUG] Clicking element: a[href='/products']
+2025-09-07 23:33:10,784 [INFO] Adding product at index 0 to the cart
+2025-09-07 23:33:10,964 [DEBUG] Waiting for confirmation modal and clicking Continue Shopping
+2025-09-07 23:33:12,414 [INFO] Adding product at index 1 to the cart
+2025-09-07 23:33:12,535 [DEBUG] Waiting for confirmation modal and clicking Continue Shopping
+2025-09-07 23:33:17,312 [INFO] Verifying cart contents...
+2025-09-07 23:33:17,337 [DEBUG] Cart contains 2 items
+2025-09-07 23:33:17,338 [INFO] Proceeding to checkout
+2025-09-07 23:33:17,340 [DEBUG] Clicking element: .btn-default.check_out
+2025-09-07 23:33:17,748 [INFO] Placing order and navigating to payment page
+2025-09-07 23:33:17,749 [DEBUG] Clicking element: a[href*='payment']
+2025-09-07 23:33:19,207 [DEBUG] Entering payment information
+2025-09-07 23:33:19,208 [DEBUG] Filling element input[name='name_on_card'] with text: Tazeem Hossain
+2025-09-07 23:33:19,273 [DEBUG] Filling element input[name='card_number'] with text: 4111111111111111
+2025-09-07 23:33:19,314 [DEBUG] Filling element input[name='cvc'] with text: 123
+2025-09-07 23:33:19,346 [DEBUG] Filling element input[name='expiry_month'] with text: 12
+2025-09-07 23:33:19,384 [DEBUG] Filling element input[name='expiry_year'] with text: 2030
+2025-09-07 23:33:19,419 [INFO] Submitting payment and confirming the order
+2025-09-07 23:33:19,420 [DEBUG] Clicking element: button#submit
+2025-09-07 23:33:21,220 [DEBUG] Got text from "div#success_message, h2:has-text('Order Placed!')": 'ORDER PLACED!'
+2025-09-07 23:33:21,221 [INFO] Order success message: ORDER PLACED!
+2025-09-07 23:33:21,222 [INFO] Downloading invoice from confirmation page
+2025-09-07 23:33:21,273 [DEBUG] Clicking element: a[href*='download_invoice']
+2025-09-07 23:33:22,252 [INFO] Invoice downloaded to: D:\CV\Latest CV\Kinetik\automation\downloads\invoice_invoice.txt
+2025-09-07 23:33:23,196 [DEBUG] Navigating to URL: https://automationexercise.com
+2025-09-07 23:33:28,191 [DEBUG] Clicking element: a[href='/login']
+2025-09-07 23:33:32,672 [INFO] Attempting login with email: tazeem_0763ebd7@yopmail.com
+2025-09-07 23:33:32,674 [DEBUG] Filling element input[data-qa='login-email'] with text: tazeem_0763ebd7@yopmail.com
+2025-09-07 23:33:32,706 [DEBUG] Filling element input[data-qa='login-password'] with text: Password123
+2025-09-07 23:33:32,726 [DEBUG] Clicking element: button[data-qa='login-button']
